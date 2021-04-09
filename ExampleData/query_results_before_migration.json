@@ -1,0 +1,924 @@
+{
+  "continents": {
+    "params": [],
+    "results": [
+      {
+        "id": 2,
+        "parent_id": null,
+        "name": "Africa"
+      },
+      {
+        "id": 9,
+        "parent_id": null,
+        "name": "Oceania"
+      },
+      {
+        "id": 19,
+        "parent_id": null,
+        "name": "Americas"
+      },
+      {
+        "id": 142,
+        "parent_id": null,
+        "name": "Asia"
+      },
+      {
+        "id": 150,
+        "parent_id": null,
+        "name": "Europe"
+      }
+    ]
+  },
+  "siblings_and_parents": {
+    "params": [
+      348
+    ],
+    "results": [
+      {
+        "id": 100,
+        "parent_id": 151,
+        "name": "Bulgaria"
+      },
+      {
+        "id": 112,
+        "parent_id": 151,
+        "name": "Belarus"
+      },
+      {
+        "id": 203,
+        "parent_id": 151,
+        "name": "Czech Republic"
+      },
+      {
+        "id": 348,
+        "parent_id": 151,
+        "name": "Hungary"
+      },
+      {
+        "id": 498,
+        "parent_id": 151,
+        "name": "Republic of Moldova"
+      },
+      {
+        "id": 616,
+        "parent_id": 151,
+        "name": "Poland"
+      },
+      {
+        "id": 642,
+        "parent_id": 151,
+        "name": "Romania"
+      },
+      {
+        "id": 643,
+        "parent_id": 151,
+        "name": "Russia"
+      },
+      {
+        "id": 703,
+        "parent_id": 151,
+        "name": "Slovakia"
+      },
+      {
+        "id": 804,
+        "parent_id": 151,
+        "name": "Ukraine"
+      },
+      {
+        "id": 39,
+        "parent_id": 150,
+        "name": "Southern Europe"
+      },
+      {
+        "id": 151,
+        "parent_id": 150,
+        "name": "Eastern Europe"
+      },
+      {
+        "id": 154,
+        "parent_id": 150,
+        "name": "Northern Europe"
+      },
+      {
+        "id": 155,
+        "parent_id": 150,
+        "name": "Western Europe"
+      },
+      {
+        "id": 2,
+        "parent_id": null,
+        "name": "Africa"
+      },
+      {
+        "id": 9,
+        "parent_id": null,
+        "name": "Oceania"
+      },
+      {
+        "id": 19,
+        "parent_id": null,
+        "name": "Americas"
+      },
+      {
+        "id": 142,
+        "parent_id": null,
+        "name": "Asia"
+      },
+      {
+        "id": 150,
+        "parent_id": null,
+        "name": "Europe"
+      }
+    ]
+  },
+  "no_login_users": {
+    "params": [],
+    "results": [
+      {
+        "user_id": 3
+      },
+      {
+        "user_id": 5
+      }
+    ]
+  },
+  "num_valid_sessions": {
+    "params": [],
+    "results": [
+      {
+        "user_id": 1,
+        "valid_sessions": 1
+      },
+      {
+        "user_id": 2,
+        "valid_sessions": 2
+      },
+      {
+        "user_id": 3,
+        "valid_sessions": 0
+      },
+      {
+        "user_id": 5,
+        "valid_sessions": 0
+      },
+      {
+        "user_id": 77,
+        "valid_sessions": 2
+      },
+      {
+        "user_id": 111,
+        "valid_sessions": 0
+      },
+      {
+        "user_id": 137,
+        "valid_sessions": 3
+      },
+      {
+        "user_id": 164,
+        "valid_sessions": 0
+      },
+      {
+        "user_id": 271,
+        "valid_sessions": 0
+      },
+      {
+        "user_id": 333,
+        "valid_sessions": 0
+      },
+      {
+        "user_id": 444,
+        "valid_sessions": 1
+      },
+      {
+        "user_id": 555,
+        "valid_sessions": 1
+      },
+      {
+        "user_id": 628,
+        "valid_sessions": 1
+      },
+      {
+        "user_id": 777,
+        "valid_sessions": 0
+      },
+      {
+        "user_id": 999,
+        "valid_sessions": 1
+      }
+    ]
+  },
+  "multi_profile_users": {
+    "params": [],
+    "results": [
+      {
+        "user_id": 3,
+        "profile_count": 2
+      },
+      {
+        "user_id": 5,
+        "profile_count": 3
+      },
+      {
+        "user_id": 77,
+        "profile_count": 3
+      },
+      {
+        "user_id": 111,
+        "profile_count": 2
+      },
+      {
+        "user_id": 137,
+        "profile_count": 2
+      },
+      {
+        "user_id": 164,
+        "profile_count": 5
+      },
+      {
+        "user_id": 444,
+        "profile_count": 2
+      },
+      {
+        "user_id": 555,
+        "profile_count": 2
+      },
+      {
+        "user_id": 628,
+        "profile_count": 2
+      }
+    ]
+  },
+  "owned_real_estate_region_count": {
+    "params": [],
+    "results": [
+      {
+        "user_id": 1,
+        "region_count": 162
+      },
+      {
+        "user_id": 2,
+        "region_count": 185
+      },
+      {
+        "user_id": 3,
+        "region_count": 174
+      },
+      {
+        "user_id": 5,
+        "region_count": 168
+      },
+      {
+        "user_id": 77,
+        "region_count": 166
+      },
+      {
+        "user_id": 111,
+        "region_count": 0
+      },
+      {
+        "user_id": 137,
+        "region_count": 169
+      },
+      {
+        "user_id": 164,
+        "region_count": 179
+      },
+      {
+        "user_id": 271,
+        "region_count": 171
+      },
+      {
+        "user_id": 333,
+        "region_count": 167
+      },
+      {
+        "user_id": 444,
+        "region_count": 147
+      },
+      {
+        "user_id": 555,
+        "region_count": 219
+      },
+      {
+        "user_id": 628,
+        "region_count": 158
+      },
+      {
+        "user_id": 777,
+        "region_count": 173
+      },
+      {
+        "user_id": 999,
+        "region_count": 172
+      }
+    ]
+  },
+  "profile_counts_by_non_google_user": {
+    "params": [],
+    "results": [
+      {
+        "user_id": 2,
+        "fb_profile_count": 1,
+        "internal_profile_count": 0
+      },
+      {
+        "user_id": 3,
+        "fb_profile_count": 1,
+        "internal_profile_count": 1
+      },
+      {
+        "user_id": 5,
+        "fb_profile_count": 2,
+        "internal_profile_count": 1
+      },
+      {
+        "user_id": 77,
+        "fb_profile_count": 3,
+        "internal_profile_count": 0
+      },
+      {
+        "user_id": 271,
+        "fb_profile_count": 1,
+        "internal_profile_count": 0
+      },
+      {
+        "user_id": 333,
+        "fb_profile_count": 1,
+        "internal_profile_count": 0
+      },
+      {
+        "user_id": 555,
+        "fb_profile_count": 1,
+        "internal_profile_count": 1
+      },
+      {
+        "user_id": 628,
+        "fb_profile_count": 0,
+        "internal_profile_count": 2
+      },
+      {
+        "user_id": 777,
+        "fb_profile_count": 1,
+        "internal_profile_count": 0
+      }
+    ]
+  },
+  "avg_daily_price_by_user_by_booking_length_category": {
+    "params": [],
+    "results": [
+      {
+        "username": "albert",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "albert",
+        "duration": "days",
+        "avg_daily_price": 138.85376962996355
+      },
+      {
+        "username": "albert",
+        "duration": "months",
+        "avg_daily_price": 4.868549051360361
+      },
+      {
+        "username": "albert",
+        "duration": "weeks",
+        "avg_daily_price": 29.966731308804757
+      },
+      {
+        "username": "albert",
+        "duration": "years",
+        "avg_daily_price": 0.5602527412312152
+      },
+      {
+        "username": "bartok",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "bartok",
+        "duration": "days",
+        "avg_daily_price": 131.95796272293623
+      },
+      {
+        "username": "bartok",
+        "duration": "months",
+        "avg_daily_price": 5.792373559332587
+      },
+      {
+        "username": "bartok",
+        "duration": "weeks",
+        "avg_daily_price": 31.759431381214426
+      },
+      {
+        "username": "bartok",
+        "duration": "years",
+        "avg_daily_price": 0.3662707224460302
+      },
+      {
+        "username": "dgy",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "dgy",
+        "duration": "days",
+        "avg_daily_price": 143.8570428638209
+      },
+      {
+        "username": "dgy",
+        "duration": "months",
+        "avg_daily_price": 6.626783746561308
+      },
+      {
+        "username": "dgy",
+        "duration": "weeks",
+        "avg_daily_price": 40.35840679418063
+      },
+      {
+        "username": "dgy",
+        "duration": "years",
+        "avg_daily_price": null
+      },
+      {
+        "username": "djb",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "djb",
+        "duration": "days",
+        "avg_daily_price": 129.38425134318317
+      },
+      {
+        "username": "djb",
+        "duration": "months",
+        "avg_daily_price": 7.325245438544755
+      },
+      {
+        "username": "djb",
+        "duration": "weeks",
+        "avg_daily_price": 31.198474614255424
+      },
+      {
+        "username": "djb",
+        "duration": "years",
+        "avg_daily_price": 0.05175441865121066
+      },
+      {
+        "username": "elviracska",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "elviracska",
+        "duration": "days",
+        "avg_daily_price": 148.63262170432816
+      },
+      {
+        "username": "elviracska",
+        "duration": "months",
+        "avg_daily_price": 3.6292681865203553
+      },
+      {
+        "username": "elviracska",
+        "duration": "weeks",
+        "avg_daily_price": 27.95942292661262
+      },
+      {
+        "username": "elviracska",
+        "duration": "years",
+        "avg_daily_price": 0.47006178864909054
+      },
+      {
+        "username": "euler",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "euler",
+        "duration": "days",
+        "avg_daily_price": 114.53167997438302
+      },
+      {
+        "username": "euler",
+        "duration": "months",
+        "avg_daily_price": 4.965986759993988
+      },
+      {
+        "username": "euler",
+        "duration": "weeks",
+        "avg_daily_price": 30.687103029049606
+      },
+      {
+        "username": "euler",
+        "duration": "years",
+        "avg_daily_price": 0.7362279801543078
+      },
+      {
+        "username": "hobeht",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "hobeht",
+        "duration": "days",
+        "avg_daily_price": 126.03267153182462
+      },
+      {
+        "username": "hobeht",
+        "duration": "months",
+        "avg_daily_price": 5.443654073632386
+      },
+      {
+        "username": "hobeht",
+        "duration": "weeks",
+        "avg_daily_price": 34.31680164617433
+      },
+      {
+        "username": "hobeht",
+        "duration": "years",
+        "avg_daily_price": 0.5408537093332626
+      },
+      {
+        "username": "kodaly",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "kodaly",
+        "duration": "days",
+        "avg_daily_price": 134.1419339581732
+      },
+      {
+        "username": "kodaly",
+        "duration": "months",
+        "avg_daily_price": 5.541894960460203
+      },
+      {
+        "username": "kodaly",
+        "duration": "weeks",
+        "avg_daily_price": 24.82416145772844
+      },
+      {
+        "username": "kodaly",
+        "duration": "years",
+        "avg_daily_price": 0.5785162154320583
+      },
+      {
+        "username": "liszt",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "liszt",
+        "duration": "days",
+        "avg_daily_price": 103.27852369165875
+      },
+      {
+        "username": "liszt",
+        "duration": "months",
+        "avg_daily_price": 6.9747352318746865
+      },
+      {
+        "username": "liszt",
+        "duration": "weeks",
+        "avg_daily_price": 27.49816788323481
+      },
+      {
+        "username": "liszt",
+        "duration": "years",
+        "avg_daily_price": 0.1053239785504275
+      },
+      {
+        "username": "luckey",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "luckey",
+        "duration": "days",
+        "avg_daily_price": null
+      },
+      {
+        "username": "luckey",
+        "duration": "months",
+        "avg_daily_price": null
+      },
+      {
+        "username": "luckey",
+        "duration": "weeks",
+        "avg_daily_price": null
+      },
+      {
+        "username": "luckey",
+        "duration": "years",
+        "avg_daily_price": null
+      },
+      {
+        "username": "riemann",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "riemann",
+        "duration": "days",
+        "avg_daily_price": 155.25913280330863
+      },
+      {
+        "username": "riemann",
+        "duration": "months",
+        "avg_daily_price": 3.5361731313146585
+      },
+      {
+        "username": "riemann",
+        "duration": "weeks",
+        "avg_daily_price": 26.085351103946604
+      },
+      {
+        "username": "riemann",
+        "duration": "years",
+        "avg_daily_price": 0.8311137771662509
+      },
+      {
+        "username": "sommerfeld",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "sommerfeld",
+        "duration": "days",
+        "avg_daily_price": 163.74602814118103
+      },
+      {
+        "username": "sommerfeld",
+        "duration": "months",
+        "avg_daily_price": 5.3227295360922025
+      },
+      {
+        "username": "sommerfeld",
+        "duration": "weeks",
+        "avg_daily_price": 22.962758307662874
+      },
+      {
+        "username": "sommerfeld",
+        "duration": "years",
+        "avg_daily_price": 0.010529678629497895
+      },
+      {
+        "username": "summertime",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "summertime",
+        "duration": "days",
+        "avg_daily_price": 160.14516051718348
+      },
+      {
+        "username": "summertime",
+        "duration": "months",
+        "avg_daily_price": 5.15080855059877
+      },
+      {
+        "username": "summertime",
+        "duration": "weeks",
+        "avg_daily_price": 35.188468820127206
+      },
+      {
+        "username": "summertime",
+        "duration": "years",
+        "avg_daily_price": 0.18551607188308875
+      },
+      {
+        "username": "ted",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "ted",
+        "duration": "days",
+        "avg_daily_price": 148.7462550688363
+      },
+      {
+        "username": "ted",
+        "duration": "months",
+        "avg_daily_price": 3.3916459059057678
+      },
+      {
+        "username": "ted",
+        "duration": "weeks",
+        "avg_daily_price": 38.39965688892896
+      },
+      {
+        "username": "ted",
+        "duration": "years",
+        "avg_daily_price": 0.2725444617204709
+      },
+      {
+        "username": "tothjancsi",
+        "duration": "centuries",
+        "avg_daily_price": null
+      },
+      {
+        "username": "tothjancsi",
+        "duration": "days",
+        "avg_daily_price": null
+      },
+      {
+        "username": "tothjancsi",
+        "duration": "months",
+        "avg_daily_price": null
+      },
+      {
+        "username": "tothjancsi",
+        "duration": "weeks",
+        "avg_daily_price": null
+      },
+      {
+        "username": "tothjancsi",
+        "duration": "years",
+        "avg_daily_price": null
+      }
+    ]
+  },
+  "top_n_booked_regions_for_user_x": {
+    "params": [
+      333,
+      10
+    ],
+    "results": [
+      {
+        "region_name": "Southern Europe",
+        "frequency": 11
+      },
+      {
+        "region_name": "Jordan",
+        "frequency": 10
+      },
+      {
+        "region_name": "Costa Rica",
+        "frequency": 9
+      },
+      {
+        "region_name": "Marshall Islands",
+        "frequency": 9
+      },
+      {
+        "region_name": "United States",
+        "frequency": 9
+      },
+      {
+        "region_name": "Azerbaijan",
+        "frequency": 8
+      },
+      {
+        "region_name": "Greenland",
+        "frequency": 8
+      },
+      {
+        "region_name": "Haiti",
+        "frequency": 8
+      },
+      {
+        "region_name": "Jamaica",
+        "frequency": 8
+      },
+      {
+        "region_name": "Jersey",
+        "frequency": 8
+      }
+    ]
+  },
+  "northest_booked_latitude_slow": {
+    "params": [],
+    "results": [
+      {
+        "user_id": 1,
+        "northest_latitude": 83.62359600000008
+      },
+      {
+        "user_id": 2,
+        "northest_latitude": null
+      },
+      {
+        "user_id": 3,
+        "northest_latitude": 83.62359600000008
+      },
+      {
+        "user_id": 5,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 77,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 111,
+        "northest_latitude": null
+      },
+      {
+        "user_id": 137,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 164,
+        "northest_latitude": 83.62359600000008
+      },
+      {
+        "user_id": 271,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 333,
+        "northest_latitude": 83.62359600000008
+      },
+      {
+        "user_id": 444,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 555,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 628,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 777,
+        "northest_latitude": 83.62359600000008
+      },
+      {
+        "user_id": 999,
+        "northest_latitude": 83.11387600000012
+      }
+    ]
+  },
+  "northest_booked_latitude_fast": {
+    "params": [],
+    "results": [
+      {
+        "user_id": 1,
+        "northest_latitude": 83.62359600000008
+      },
+      {
+        "user_id": 2,
+        "northest_latitude": null
+      },
+      {
+        "user_id": 3,
+        "northest_latitude": 83.62359600000008
+      },
+      {
+        "user_id": 5,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 77,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 111,
+        "northest_latitude": null
+      },
+      {
+        "user_id": 137,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 164,
+        "northest_latitude": 83.62359600000008
+      },
+      {
+        "user_id": 271,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 333,
+        "northest_latitude": 83.62359600000008
+      },
+      {
+        "user_id": 444,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 555,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 628,
+        "northest_latitude": 83.11387600000012
+      },
+      {
+        "user_id": 777,
+        "northest_latitude": 83.62359600000008
+      },
+      {
+        "user_id": 999,
+        "northest_latitude": 83.11387600000012
+      }
+    ]
+  }
+}

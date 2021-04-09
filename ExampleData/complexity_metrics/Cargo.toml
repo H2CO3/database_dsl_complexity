@@ -1,0 +1,15 @@
+[package]
+name = "complexity_metrics"
+version = "0.1.0"
+authors = ["Árpád Goretity <h2co3@h2co3.org>"]
+edition = "2018"
+
+[dependencies]
+serde = "1.0.123"
+serde_json = { version = "1.0.61", features = ["preserve_order"] }
+once_cell = "1.5.2"
+regex = "1.4.3"
+thiserror = "1.0.23"
+structopt = "0.3.21"
+sqlparser = { version = "0.8.0", features = ["serde"] }
+rusqlite = "0.24.2"

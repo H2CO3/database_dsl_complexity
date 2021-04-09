@@ -1,0 +1,135 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 7c85e276fb3233e931684b7e149a29e304fa1ee60f139f310256ba82750b7629
+
+name:           HaskellEsqueleto
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/HaskellEsqueleto#readme>
+homepage:       https://github.com/githubuser/HaskellEsqueleto#readme
+bug-reports:    https://github.com/githubuser/HaskellEsqueleto/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/HaskellEsqueleto
+
+library
+  exposed-modules:
+      Index
+      LoadData
+      Queries
+      RealEstateKind
+      Schema
+      ToJSONRow
+  other-modules:
+      Paths_HaskellEsqueleto
+  hs-source-dirs:
+      src
+  ghc-options: -Wno-partial-type-signatures
+  build-depends:
+      aeson
+    , aeson-casing
+    , base
+    , base64-bytestring
+    , bytestring
+    , casing
+    , containers
+    , direct-sqlite
+    , esqueleto >=3.4.0.0
+    , hex-text
+    , mtl >=2.2.2
+    , multimap
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , system-fileio
+    , system-filepath
+    , text
+    , time
+    , timeit
+    , transformers
+    , unordered-containers
+    , vector
+  default-language: Haskell2010
+
+executable HaskellEsqueleto-exe
+  main-is: Main.hs
+  other-modules:
+      Util
+      Paths_HaskellEsqueleto
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wno-partial-type-signatures
+  build-depends:
+      HaskellEsqueleto
+    , aeson
+    , aeson-casing
+    , base
+    , base64-bytestring
+    , bytestring
+    , casing
+    , containers
+    , direct-sqlite
+    , esqueleto >=3.4.0.0
+    , hex-text
+    , mtl >=2.2.2
+    , multimap
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , system-fileio
+    , system-filepath
+    , text
+    , time
+    , timeit
+    , transformers
+    , unordered-containers
+    , vector
+  default-language: Haskell2010
+
+test-suite HaskellEsqueleto-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_HaskellEsqueleto
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HaskellEsqueleto
+    , aeson
+    , aeson-casing
+    , base
+    , base64-bytestring
+    , bytestring
+    , casing
+    , containers
+    , direct-sqlite
+    , esqueleto >=3.4.0.0
+    , hex-text
+    , mtl >=2.2.2
+    , multimap
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , system-fileio
+    , system-filepath
+    , text
+    , time
+    , timeit
+    , transformers
+    , unordered-containers
+    , vector
+  default-language: Haskell2010

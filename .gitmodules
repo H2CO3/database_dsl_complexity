@@ -1,0 +1,3 @@
+[submodule "SwiftCoreStore/Dependencies/CoreStore"]
+	path = SwiftCoreStore/Dependencies/CoreStore
+	url = https://github.com/JohnEstropia/CoreStore

@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>Browse Queries - Stack Exchange Data Explorer</title>
+
+    <link href="sede_main_page_files/master.css" rel="stylesheet">
+
+    
+    <script async="" src="sede_main_page_files/analytics.js"></script><script src="sede_main_page_files/jquery.js"></script>
+
+    <script src="sede_main_page_files/master"></script>
+
+    
+
+    <script>
+        DataExplorer.init({
+            'User.id': null,
+            'User.guessedID': null,
+            'User.hideSchema': false,
+            'User.isAuthenticated': false,
+            'Site.id': 1,
+            'WhitelistEnabled': false
+        });
+    </script>
+</head>
+<body>
+    <div id="topbar">
+        <div class="page">
+            <div class="network-items">
+                <a href="https://stackexchange.com/">Stack Exchange</a>
+            </div>
+            <div class="topbar-links">
+                <span class="navigation-links">
+                    <a href="https://data.stackexchange.com/account/login?returnurl=/stackoverflow/queries?order_by=favorite&amp;page=1&amp;pagesize=100">log in</a>
+                    <a href="https://data.stackexchange.com/help">help</a>
+                </span>
+                <div class="search-form">
+                    <form method="GET" action="/stackoverflow/queries">
+                        <input id="q" maxlength="80" name="q" placeholder="search" size="28" tabindex="1" type="text">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div id="header">
+            <a id="logo" href="https://data.stackexchange.com/" title="Stack Exchange Data Explorer">Stack Exchange Data Explorer</a>
+            
+<nav class="primary">
+    <div class="nav">
+        <ul>
+                <li>
+                    <a href="https://data.stackexchange.com/" title="Home">Home</a>
+                </li>                
+                <li>
+                    <a class="youarehere" href="https://data.stackexchange.com/stackoverflow/queries" title="Queries">Queries</a>
+                </li>                
+                <li>
+                    <a href="https://data.stackexchange.com/users" title="Users">Users</a>
+                </li>                
+        </ul>
+    </div>
+    <div style="float:right;" class="nav">
+        <ul>
+                <li style="margin-right:0px;">
+                    <a id="compose-button" href="https://data.stackexchange.com/stackoverflow/query/new" title="Compose Query">Compose Query</a>
+                </li>
+        <li class="site-selector-arrow "><span class="site-icon-wrapper"><img src="sede_main_page_files/icon-16.png" alt="Stack Overflow" title="Switch site from Stack Overflow"></span>▾</li></ul>
+    <div class="site-selector-popup"><p class="loading">Loading list of sites...</p></div></div>
+</nav>
+            <script>
+                DataExplorer.initComposeButton({
+                    IconUrl: 'https://cdn.sstatic.net/Sites/stackoverflow/img/icon-16.png',
+                    LongName: 'Stack Overflow'
+                });
+            </script>
+        </div>
+            <div class="subheader">
+            <h2>All Queries</h2>   
+                    <div id="tabs">
+                    <a href="https://data.stackexchange.com/stackoverflow/queries?order_by=featured&amp;pagesize=100" title="Interesting queries selected by the administrators">featured</a>
+                    <a href="https://data.stackexchange.com/stackoverflow/queries?order_by=recent&amp;pagesize=100" title="Recently saved queries">recent</a>
+                    <a class="youarehere" href="https://data.stackexchange.com/stackoverflow/queries?order_by=favorite&amp;pagesize=100" title="Favorite saved queries">favorite</a>
+                    <a href="https://data.stackexchange.com/stackoverflow/queries?order_by=popular&amp;pagesize=100" title="Saved queries with the most views">popular</a>
+                    <a href="https://data.stackexchange.com/stackoverflow/queries?order_by=everything&amp;pagesize=100" title="All queries recently executed on the site">everything</a>
+            </div>   
+    </div>
+
+        
+
+<div id="mainbar">
+    <ul class="querylist">
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>351</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="212,512">213k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="how long before I get tag badges?
+" href="https://data.stackexchange.com/stackoverflow/query/785/how-many-upvotes-do-i-have-for-each-tag">How many upvotes do I have for each tag?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-29 13:59:15Z" class="relativetime">sep 29 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>240</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="193,285">193k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Zero and non-zero accepted count. Self-accepted answers do not count.
+" href="https://data.stackexchange.com/stackoverflow/query/7521/how-unsung-am-i">How Unsung am I?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-04 08:30:10Z" class="relativetime">oct 4 11</span>
+                        <a href="https://data.stackexchange.com/users/2327">Eric</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>192</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="152,954">153k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="How many comments do I have for each score.
+" href="https://data.stackexchange.com/stackoverflow/query/947/my-comment-score-distribution">My Comment Score distribution</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-12-22 00:27:09Z" class="relativetime">dec 22 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>165</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="143,893">144k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Looks at unanswered questions in your top 20 tags and sorts them by
+a combined weight which takes into account: score, askers reputation and how
+well you do on that particular tag
+" href="https://data.stackexchange.com/stackoverflow/query/4038/find-interesting-unanswered-questions">Find interesting unanswered questions</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-03 18:31:55Z" class="relativetime">oct 3 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>162</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="160,383">160k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="On avg how often are answers I give, accepted
+" href="https://data.stackexchange.com/stackoverflow/query/949/what-is-my-accepted-answer-percentage-rate">What is my accepted answer percentage rate</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-03 18:28:44Z" class="relativetime">oct 3 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>127</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="158,383">158k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/6772/stackoverflow-rank-and-percentile">StackOverflow Rank and Percentile</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-11-04 20:16:47Z" class="relativetime">nov 4 12</span>
+                        <a href="https://data.stackexchange.com/users/54">Cade Roux</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>91</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="141,788">142k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="My Non Community Wiki Posts that earn the most Passive Reputation.
+Reputation gained in the first 15 days of post is ignored,
+all reputation after that is considered passive reputation.
+Post must be at least 60 Days old.
+" href="https://data.stackexchange.com/stackoverflow/query/8116/my-money-for-jam">My Money for Jam</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-04 23:08:32Z" class="relativetime">oct 4 11</span>
+                        <a href="https://data.stackexchange.com/users/2180">krock</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>74</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="153,055">153k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="What questions does Jon Skeet have a higher/lower score on than me?
+" href="https://data.stackexchange.com/stackoverflow/query/3160/jon-skeet-comparison">Jon Skeet comparison</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-04 23:04:44Z" class="relativetime">oct 4 11</span>
+                        <a href="https://data.stackexchange.com/users/372">cobbal</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>73</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="162,798">163k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Looks for posts with more than half the amount of downvotes as they have upvotes
+Ordered by upvotes
+" href="https://data.stackexchange.com/stackoverflow/query/466/most-controversial-posts-on-the-site">Most controversial posts on the site</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-29 14:03:01Z" class="relativetime">sep 29 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>72</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="89,605">90k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Created by samliew (http://stackoverflow.com/users/584192/samuel-liew)
+" href="https://data.stackexchange.com/stackoverflow/query/53058/top-users-by-country">Top Users by Country</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-11-19 06:24:47Z" class="relativetime">nov 19 11</span>
+                        <a href="https://data.stackexchange.com/users/6925">Samuel Liew</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>50</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="128,910">129k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Plot the site activity by voting, questions, answers and comments, aggregated per week." href="https://data.stackexchange.com/stackoverflow/query/161411/site-activity-and-votegraph">Site Activity and VoteGraph</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2015-06-02 16:28:05Z" class="relativetime">jun 2 15</span>
+                        <a href="https://data.stackexchange.com/users/12469">rolfl</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>48</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="50,174">50k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Counts how many edits a user has, broken into Question and Answer edits.
+Also shows how close you are to getting each editor badge.
+" href="https://data.stackexchange.com/stackoverflow/query/8553/how-many-edits-do-i-have">How many edits do I have?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-04 18:18:06Z" class="relativetime">oct 4 11</span>
+                        <a href="https://data.stackexchange.com/users/2384">Daniel Vandersluis</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>45</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="68,731">69k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Shows all my suggested edits that were rejected by the reviewers.
+" href="https://data.stackexchange.com/stackoverflow/query/45755/my-rejected-edits">My rejected edits</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-05-03 07:58:18Z" class="relativetime">may 3 12</span>
+                        <a href="https://data.stackexchange.com/users/6338">Idolon</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>45</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="44,623">45k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/298418/candidate-score">Candidate score</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2015-04-08 19:54:04Z" class="relativetime">apr 8 15</span>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>42</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="128,034">128k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="A list of questions with a high score and low view count
+" href="https://data.stackexchange.com/stackoverflow/query/951/low-views-high-votes-yet-unanswered">Low views, high votes yet unanswered</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-12 23:41:16Z" class="relativetime">sep 12 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>40</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="145,525">146k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="A list of the top 500 users with the highest average answer score excluding
+community wiki / closed posts or users with less than 10 answers
+" href="https://data.stackexchange.com/stackoverflow/query/952/top-500-answerers-on-the-site">Top 500 answerers on the site</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-03 19:50:05Z" class="relativetime">oct 3 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>40</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="42,040">42k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="So I know what needs to be done,
+with tag popularity included (all 40 tags)
+" href="https://data.stackexchange.com/stackoverflow/query/35591/generalist-progression-updated">Generalist Progression #updated</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-12-28 21:33:48Z" class="relativetime">dec 28 11</span>
+                        <a href="https://data.stackexchange.com/users/3076">gpetrioli</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>38</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="147,627">148k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Shows the top 50 post editors, where the user was the most recent editor
+(meaning the results are conservative compared to the actual number of edits).
+" href="https://data.stackexchange.com/stackoverflow/query/6627/top-50-most-prolific-editors">Top 50 Most Prolific Editors</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-19 12:06:01Z" class="relativetime">sep 19 11</span>
+                        <a href="https://data.stackexchange.com/users/1674">Jon Seigel</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>38</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="39,321">39k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="The 50 highest ranked comments with post links
+" href="https://data.stackexchange.com/stackoverflow/query/27196/my-top-ranked-comments">My Top-ranked comments</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-04 08:44:20Z" class="relativetime">oct 4 11</span>
+                        <a href="https://data.stackexchange.com/users/5225">Renesis</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>37</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="44,998">45k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Determines how many edits a user has made as well as how many more edits until the `Editor`, `Strunk &amp; White` and `Copy Editor` badges are earned.
+" href="https://data.stackexchange.com/stackoverflow/query/28666/how-many-edits-have-i-made-and-how-much-more-until-i-earn-the-badges">How many edits have I made and how much more until I earn the badges?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-11-30 20:50:58Z" class="relativetime">nov 30 11</span>
+                        <a href="https://data.stackexchange.com/users/3414">Jeff Mercado</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>35</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="51,700">52k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="A simply query to find users in your city or country. Added user links to the original version.
+" href="https://data.stackexchange.com/stackoverflow/query/9320/find-stack-overflow-users-in-your-city-with-user-links">Find Stack Overflow Users In Your City (with user-links)</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-08-31 18:14:34Z" class="relativetime">aug 31 11</span>
+                        <a href="https://data.stackexchange.com/users/159">georg.fritzsche</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>35</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="44,105">44k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Where have I 'met' another user? (Reminder, Jon Skeet's user id is 22656 :) May throw up some false positives because of @Name matches.
+" href="https://data.stackexchange.com/stackoverflow/query/25355/have-we-met">Have we met?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-08-17 23:24:46Z" class="relativetime">aug 17 11</span>
+                        <a href="https://data.stackexchange.com/users/2655">Benjol</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>34</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="37,179">37k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/220825/my-reputation-graph">My reputation graph</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2014-08-26 19:39:31Z" class="relativetime">aug 26 14</span>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>30</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="42,281">42k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="How many of my comments have scores of 5 and higher, thus qualifying for the Pundit badge?
+" href="https://data.stackexchange.com/stackoverflow/query/14342/whats-my-pundit-badge-progress">What's my Pundit badge progress?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-11-20 10:44:00Z" class="relativetime">nov 20 11</span>
+                        <a href="https://data.stackexchange.com/users/2571">BoltClock</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>29</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="130,195">130k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Does not count self-answers.
+Shows users with at least @MinAnswers answers.
+" href="https://data.stackexchange.com/stackoverflow/query/1433/users-with-highest-accept-rate-of-their-answers">Users with highest accept rate of their answers</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-25 00:16:00Z" class="relativetime">sep 25 11</span>
+                        <a href="https://data.stackexchange.com/users/74">interjay</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>29</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="127,554">128k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a href="https://data.stackexchange.com/stackoverflow/query/2357/how-many-upvotes-do-i-have-towards-tag-specialist-badges">How many upvotes do I have towards tag-specialist badges?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-04 23:07:25Z" class="relativetime">oct 4 11</span>
+                        <a href="https://data.stackexchange.com/users/160">Roger Pate</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>29</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="75,729">76k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="My comments with at least one upvote, in order with most upvoted-comments first." href="https://data.stackexchange.com/stackoverflow/query/60098/my-most-upvoted-comments-including-comment-text">My Most Upvoted Comments (including comment text)</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-01-24 21:17:31Z" class="relativetime">jan 24 12</span>
+                        <a href="https://data.stackexchange.com/users/7080">Joey Adams</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>27</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="136,272">136k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Top 100 Users that rarely upvote in comparison to the
+estimated amount of upvotes they received (doesn't account
+for e.g. bounties but should give a sufficient estimation).
+Useful settings (MinRep, MinUpvotes): (1000, 100), (10000, 0).
+" href="https://data.stackexchange.com/stackoverflow/query/6856/high-standards-top-100-users-that-rarely-upvote">High Standards - Top 100 Users that rarely upvote.</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-04 23:57:41Z" class="relativetime">oct 4 11</span>
+                        <a href="https://data.stackexchange.com/users/159">georg.fritzsche</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>24</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="165,905">166k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/90306/compare-size-and-growth-trends-for-stackoverflow-tags">Compare Size and Growth Trends for StackOverflow Tags</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2013-06-05 15:30:14Z" class="relativetime">jun 5 13</span>
+                        <a href="https://data.stackexchange.com/users/10185">Lee Whitney</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>24</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="44,700">45k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Determines how many edits remain before achieving the Editor, Strunk and White and Copy Editor badges
+" href="https://data.stackexchange.com/stackoverflow/query/10950/progress-towards-editor-badges">Progress towards editor badges</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-29 14:34:17Z" class="relativetime">sep 29 11</span>
+                        <a href="https://data.stackexchange.com/users/2855">Lord Torgamus</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>23</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="40,572">41k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Displays all 40 top tags and your score in each tag. You need to get at least 15 points in 20 tags
+" href="https://data.stackexchange.com/stackoverflow/query/33647/generalist-badge">Generalist badge</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-12-26 23:42:41Z" class="relativetime">dec 26 11</span>
+                        <a href="https://data.stackexchange.com/users/5519">marat.snowbear</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>23</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="37,419">37k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/60668/feedback-on-my-posts">Feedback on my posts</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-02-01 20:52:16Z" class="relativetime">feb 1 12</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>22</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="119,767">120k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Total number of questions and answers for the last 12 months (in 30 day chunks)
+" href="https://data.stackexchange.com/stackoverflow/query/6134/total-questions-and-answers-per-month-for-the-last-12">Total Questions and Answers per Month for the last 12</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-29 23:24:11Z" class="relativetime">sep 29 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>22</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="112,093">112k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a href="https://data.stackexchange.com/stackoverflow/query/49109/suggested-edits-on-my-stuff">Suggested edits on my stuff</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-12-30 00:09:39Z" class="relativetime">dec 30 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>22</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="40,537">41k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="What time of day do I post questions and answers most?
+" href="https://data.stackexchange.com/stackoverflow/query/17321/my-activity-by-utc-hour">My Activity by UTC Hour</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-07-23 05:55:32Z" class="relativetime">jul 23 11</span>
+                        <a href="https://data.stackexchange.com/users/5081">phrogz42</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>22</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="40,141">40k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Shows a user's total edits so far, how many edits until the &quot;Strunk and White&quot; (now 80 at SO)
+badge, and how many edits until the &quot;Copy Editor&quot; badge (now 500 at SO).
+" href="https://data.stackexchange.com/stackoverflow/query/56748/how-many-edits-until-copy-editor-proper">How many edits until Copy Editor (proper)?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-12-28 19:15:20Z" class="relativetime">dec 28 11</span>
+                        <a href="https://data.stackexchange.com/users/6729">Erwin Brandstetter</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>22</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="38,419">38k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Of the top 40 tags, how many do I have a score of 15 in?
+Need 15 score, or better, in at least 20 of the top 40 tags, to get the badge.
+" href="https://data.stackexchange.com/stackoverflow/query/84772/generalist-badge-progress-toward-with-improved-sort">Generalist Badge, Progress toward -- with improved sort</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-11-12 11:59:48Z" class="relativetime">nov 12 12</span>
+                        <a href="https://data.stackexchange.com/users/6306">Awesome Poodles</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>21</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="81,234">81k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Select a list of posts which are one-vote away from a badge" href="https://data.stackexchange.com/stackoverflow/query/169776/one-vote-short">One Vote Short</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2015-02-14 21:17:33Z" class="relativetime">feb 14 15</span>
+                        <a href="https://data.stackexchange.com/users/12469">rolfl</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>21</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="41,463">41k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="This query lists all users in a given location sorted by reputation.
+" href="https://data.stackexchange.com/stackoverflow/query/3631/list-of-users-in-a-given-location">List of Users in a given location</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-25 00:07:05Z" class="relativetime">sep 25 11</span>
+                        <a href="https://data.stackexchange.com/users/771">lkessler</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>21</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="41,441">41k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Shows the breakdown of the close reasons you've used in successfully closed questions.
+" href="https://data.stackexchange.com/stackoverflow/query/17950/how-many-questions-have-i-helped-to-close">How many questions have I helped to close?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-04 08:54:29Z" class="relativetime">oct 4 11</span>
+                        <a href="https://data.stackexchange.com/users/1674">Jon Seigel</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>21</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="41,219">41k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Find useres that have been members for a shorter time than me
+but have more reputation points.
+" href="https://data.stackexchange.com/stackoverflow/query/6925/newer-users-with-more-reputation-than-me">Newer Users with More Reputation Than Me</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-27 01:22:37Z" class="relativetime">sep 27 11</span>
+                        <a href="https://data.stackexchange.com/users/2180">krock</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>21</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="40,789">41k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Find the users who have marked my questions as favorites.
+" href="https://data.stackexchange.com/stackoverflow/query/7709/find-my-fans">Find My Fans</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-16 07:30:33Z" class="relativetime">sep 16 11</span>
+                        <a href="https://data.stackexchange.com/users/2180">krock</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>20</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="134,987">135k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="The top 20 questions with the most down-votes (ignores up-votes)
+" href="https://data.stackexchange.com/stackoverflow/query/36660/most-down-voted-questions">Most Down-Voted Questions</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-06-04 20:54:15Z" class="relativetime">jun 4 11</span>
+                        <a href="https://data.stackexchange.com/users/5751">jon.doe5752</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>19</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="134,837">135k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a href="https://data.stackexchange.com/stackoverflow/query/3978/most-popular-stackoverflow-tags-in-may-2010">Most popular StackOverflow tags in May 2010</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-08-27 18:18:18Z" class="relativetime">aug 27 11</span>
+                        <a href="https://data.stackexchange.com/users/1016">lukasz.lew</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>19</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="38,600">39k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="List comments in order of score
+" href="https://data.stackexchange.com/stackoverflow/query/10098/how-long-until-i-get-the-pundit-badge">How long until I get the pundit badge?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-04 08:43:16Z" class="relativetime">oct 4 11</span>
+                        <a href="https://data.stackexchange.com/users/2497">Philip Potter</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>18</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="73,351">73k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="How far along are you for the Illuminator badge? You need 500 qualifying answers; 50 for the Refiner and 1 for Explainer." href="https://data.stackexchange.com/stackoverflow/query/228743/illuminator-badge-progress">Illuminator badge progress</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2014-09-30 21:28:18Z" class="relativetime">sep 30 14</span>
+                        <a href="https://data.stackexchange.com/users/5824">Martijn Pieters</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>18</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="54,627">55k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Show all values in known tables that map a type id to a type name." href="https://data.stackexchange.com/stackoverflow/query/36599/show-all-types">Show all types</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2020-05-13 19:09:31Z" class="relativetime">may 13</span>
+                        <a href="https://data.stackexchange.com/users/3240">Gilles</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>18</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="42,520">43k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Shows all my suggested edits that were accepted by the reviewers.
+" href="https://data.stackexchange.com/stackoverflow/query/45756/my-accepted-edits">My accepted edits</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-05-03 07:59:14Z" class="relativetime">may 3 12</span>
+                        <a href="https://data.stackexchange.com/users/6338">Idolon</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>18</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="41,503">42k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Received votes etc
+" href="https://data.stackexchange.com/stackoverflow/query/13294/users-statistics-individual-user">Users statistics (individual user)</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-01-10 02:25:15Z" class="relativetime">jan 10 12</span>
+                        <a href="https://data.stackexchange.com/users/34">sth</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>17</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="57,036">57k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/69607/what-is-my-archaeologist-badge-progress">What is my Archaeologist badge progress?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-05-09 17:06:07Z" class="relativetime">may 9 12</span>
+                        <a href="https://data.stackexchange.com/users/2528">GregB</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>17</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="38,031">38k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Counts the number of title and/or body revisions you've made
+on other people's non-deleted posts.
+" href="https://data.stackexchange.com/stackoverflow/query/35999/how-many-copy-editor-strunk-white-qualifying-edits-have-i-made">How many Copy Editor/Strunk &amp; White-qualifying edits have I made?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-02 11:25:36Z" class="relativetime">oct 2 11</span>
+                        <a href="https://data.stackexchange.com/users/1674">Jon Seigel</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>17</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="36,688">37k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Variation of Eric's query &quot;How unsung am I?&quot; Zero and non-zero accepted count. Self-accepted answers do not count. How many more accepted answers with a score of zero are needed, assuming no more accepted answers with a score greater than 0, to receive both badges.
+" href="https://data.stackexchange.com/stackoverflow/query/45192/how-many-more-accepted-answers-do-i-need-until-tenacious-unsung-hero">How many more accepted answers do I need until Tenacious/Unsung Hero</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-30 16:20:07Z" class="relativetime">sep 30 11</span>
+                        <a href="https://data.stackexchange.com/users/6390">PaulPRO</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>17</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="29,988">30k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Shows how often a user's answers get a specific score. Related to http://odata.stackexchange.com/stackoverflow/q/1930
+" href="https://data.stackexchange.com/stackoverflow/query/9900/distribution-of-scores-on-my-answers">Distribution of scores on my answers</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-25 00:08:19Z" class="relativetime">sep 25 11</span>
+                        <a href="https://data.stackexchange.com/users/2384">Daniel Vandersluis</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>17</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="22,179">22k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/65472/how-close-am-i-to-the-sportsmanship-badge">How close am I to the sportsmanship badge?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-03-29 06:26:07Z" class="relativetime">mar 29 12</span>
+                        <a href="https://data.stackexchange.com/users/6867">Mahnax</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>16</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="41,496">41k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="How many questions per month does each tag in the top 10 tags get" href="https://data.stackexchange.com/stackoverflow/query/59301/questions-per-month-top-10-tags-compared">Questions per month top 10 tags compared</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-01-16 01:48:52Z" class="relativetime">jan 16 12</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>16</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="15,718">16k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Show users who marked a as &quot;favorites&quot;, and which posts they marked
+for all questions of a certain user
+" href="https://data.stackexchange.com/stackoverflow/query/28557/who-favorited-my-questions">Who Favorited My Questions?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-25 15:04:38Z" class="relativetime">sep 25 11</span>
+                        <a href="https://data.stackexchange.com/users/5374">kadosh76</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>15</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="112,356">112k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="This query shows the number of upvotes, downvotes and D/U ratio for the answers to the most common tags
+" href="https://data.stackexchange.com/stackoverflow/query/1256/most-and-least-dangerous-tags-to-answer-among-the-tags-with-1000-questions">Most and least dangerous tags to answer (among the tags with 1000+ questions)</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-28 11:18:01Z" class="relativetime">sep 28 11</span>
+                        <a href="https://data.stackexchange.com/users/46">Quassnoi</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>15</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="28,173">28k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Users sorted by total number of views of their questions per day (with a 30-day softener to keep hot new posts from skewing the results).
+" href="https://data.stackexchange.com/stackoverflow/query/43336/who-brings-in-the-crowds">Who Brings in the Crowds?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2014-03-05 15:00:32Z" class="relativetime">mar 5 14</span>
+                        <a href="https://data.stackexchange.com/users/5592">mattdm</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>15</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="23,979">24k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a href="https://data.stackexchange.com/stackoverflow/query/28702/editor-strunk-white-copy-editor">Editor, Strunk &amp; White, Copy Editor</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-02 20:44:17Z" class="relativetime">oct 2 11</span>
+                        <a href="https://data.stackexchange.com/users/5185">cyberkiwi2010</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>15</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="19,395">19k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Shows the number of unanswered questions by tag for the most popular tags.
+" href="https://data.stackexchange.com/stackoverflow/query/42823/unanswered-questions-by-tag">Unanswered Questions by Tag</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-08-27 21:38:14Z" class="relativetime">aug 27 11</span>
+                        <a href="https://data.stackexchange.com/users/1674">Jon Seigel</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>14</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="19,534">20k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="How many of my comments have scores of 5 and higher, thus qualifying for the Pundit badge?
+" href="https://data.stackexchange.com/stackoverflow/query/75438/whats-my-pundit-badge-progress">What's my Pundit badge progress?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-07-16 21:41:49Z" class="relativetime">jul 16 12</span>
+                        <a href="https://data.stackexchange.com/users/8269">8269</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>13</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="126,837">127k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Now addresses the fact that some badges aren't even introduced until a certain date, so some members couldn't have gotten it any sooner since they aren't applied retroactively.
+Added 1 plus DateDiff (OBOE)
+" href="https://data.stackexchange.com/stackoverflow/query/10418/quickest-badge-earners-v2c">Quickest badge earners V2c</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-04 23:58:46Z" class="relativetime">oct 4 11</span>
+                        <a href="https://data.stackexchange.com/users/27">polygenelubricants</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>13</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="112,343">112k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Looking at posts shorter than 200 with the text `hank` somewhere in it
+" href="https://data.stackexchange.com/stackoverflow/query/886/posts-with-many-thank-you-answers">Posts with many "thank you" answers</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-03 19:49:55Z" class="relativetime">oct 3 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>13</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="46,016">46k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/172449/tagged-zombie-timeseries">Tagged Zombie TimeSeries</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2014-03-13 02:16:21Z" class="relativetime">mar 13 14</span>
+                        <a href="https://data.stackexchange.com/users/12469">rolfl</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>12</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="127,150">127k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="A list of users that have duplicate accounts on site, based on the EmailHash and lots of reputation is riding on it
+" href="https://data.stackexchange.com/stackoverflow/query/975/users-with-more-than-one-duplicate-account-and-a-more-than-1000-reputation-in-agg">Users with more than one duplicate account and a more than 1000 reputation in aggregate</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-20 16:00:56Z" class="relativetime">sep 20 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>12</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="29,733">30k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/151786/search-posts-by-userid-comment-text">Search posts by UserId, comment text</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2013-12-07 10:12:19Z" class="relativetime">dec 7 13</span>
+                        <a href="https://data.stackexchange.com/users/8439">hims056</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>12</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="26,501">27k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/167924/top-x-user-reputation">Top X User Reputation</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2014-08-11 21:29:28Z" class="relativetime">aug 11 14</span>
+                        <a href="https://data.stackexchange.com/users/12469">rolfl</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>12</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="26,438">26k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Calculates the number of days a user has with questions that have upvotes and there are no downvoted questions and displays progress toward each of the badges" href="https://data.stackexchange.com/stackoverflow/query/206201/curious-inquisitive-socratic-badge-progress">Curious Inquisitive Socratic Badge Progress</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2014-07-06 15:35:01Z" class="relativetime">jul 6 14</span>
+                        <a href="https://data.stackexchange.com/users/10490">Bohemian</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>12</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="24,945">25k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Your comments with the most upvotes" href="https://data.stackexchange.com/stackoverflow/query/109328/my-highest-rated-comments">My Highest Rated Comments</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2013-04-19 18:49:24Z" class="relativetime">apr 19 13</span>
+                        <a href="https://data.stackexchange.com/users/8502">Mysticial</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>12</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="20,885">21k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Gets the most commonly associated tags to a particular tag, by number of posts." href="https://data.stackexchange.com/stackoverflow/query/75877/related-tags">Related Tags</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-07-24 04:00:31Z" class="relativetime">jul 24 12</span>
+                        <a href="https://data.stackexchange.com/users/6633">jadarnel27</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>12</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="18,714">19k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Lists all questions I have proposed an answer to, but the original question asker hasn't accepted an answer
+" href="https://data.stackexchange.com/stackoverflow/query/8196/questions-i-have-answered-where-asker-has-not-accepted-an-answer">Questions I have answered where asker has not accepted an answer</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-28 11:18:33Z" class="relativetime">sep 28 11</span>
+                        <a href="https://data.stackexchange.com/users/79">BenP</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>12</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="17,264">17k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="
+" href="https://data.stackexchange.com/stackoverflow/query/46093/revival-necromancer-badge-candidates">Revival/Necromancer badge candidates</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-06 00:54:02Z" class="relativetime">sep 6 11</span>
+                        <a href="https://data.stackexchange.com/users/6344">danielsixfive</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>12</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="15,202">15k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/190371/reviews-on-your-posts">Reviews on your posts</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2014-08-12 14:15:48Z" class="relativetime">aug 12 14</span>
+                        <a href="https://data.stackexchange.com/users/12600">The Guy with The Hat</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>11</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="120,214">120k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="List of users with more than 10 zero score answers, ordered by ratio of zero to non zero score
+" href="https://data.stackexchange.com/stackoverflow/query/6607/the-true-unsung-heros">The true unsung heros</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-03 19:44:15Z" class="relativetime">oct 3 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>11</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="61,957">62k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Searches for open, non-CW posts older than 60 days with no accepted answer and no answer scoring 2 or more. (Now updated so merged questions do not appear.)
+" href="https://data.stackexchange.com/stackoverflow/query/56730/find-questions-ripe-for-the-revival-and-necromancer-badges">Find questions ripe for the Revival and Necromancer badges</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-03-28 01:57:29Z" class="relativetime">mar 28 12</span>
+                        <a href="https://data.stackexchange.com/users/5592">mattdm</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>11</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="30,378">30k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="The top 20 answers with the most up-votes (ignores down-votes)
+" href="https://data.stackexchange.com/stackoverflow/query/36656/most-upvoted-answers">Most Upvoted Answers</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-06-03 16:51:43Z" class="relativetime">jun 3 11</span>
+                        <a href="https://data.stackexchange.com/users/5751">jon.doe5752</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>11</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="22,787">23k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Zero and non-zero accepted count. Self-accepted answers do not count.
+" href="https://data.stackexchange.com/stackoverflow/query/197953/how-unsung-am-i">How Unsung am I?</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2014-05-30 12:36:56Z" class="relativetime">may 30 14</span>
+                        <a href="https://data.stackexchange.com/users/5824">Martijn Pieters</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>11</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="17,801">18k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="So I know what needs to be done,
+with tag popularity included (all 40 tags)
+" href="https://data.stackexchange.com/stackoverflow/query/76727/generalist-progression-updated">Generalist Progression #updated</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-08-08 23:56:06Z" class="relativetime">aug 8 12</span>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="122,113">122k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/1718/up-vs-down-votes-by-day-of-week-of-question-or-answer">Up vs Down votes by day of week of Question or Answer</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-05-10 16:37:48Z" class="relativetime">may 10 12</span>
+                        <a href="https://data.stackexchange.com/users/55">Mark Hurd</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="109,199">109k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a href="https://data.stackexchange.com/stackoverflow/query/1080/top-users-by-number-of-bounties-won">Top Users by Number of Bounties Won</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-07 21:39:22Z" class="relativetime">sep 7 11</span>
+                        <a href="https://data.stackexchange.com/users/27">polygenelubricants</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="50,654">51k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="This query lists questions that have been closed as duplicates of another question that has since been deleted. Such questions should be either deleted or, if they have good answers or are otherwise of decent quality, reopened. Note that non-locked questions with no answers and a negative score will be automatically deleted by the RemoveDeadQuestions script after 30 days, as indicated by the &quot;Roombable?&quot; column.
+
+By default, the results will be sorted with the most recently closed questions first.  You can click the column headings to change the sort order.  For example, questions with a high answer score may be good candidates for reopening (or for a historical lock), while questions with a high score but no answers may simply need a new dupe target (see http://meta.stackexchange.com/q/291824)." href="https://data.stackexchange.com/stackoverflow/query/209965/duplicates-of-deleted-questions">Duplicates of deleted questions</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2019-10-11 17:45:11Z" class="relativetime">oct 11 19</span>
+                        <a href="https://data.stackexchange.com/users/7885">Ilmari Karonen</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="38,387">38k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/160805/legendary-badge-advancement-topcount">Legendary Badge advancement TopCount</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2014-01-19 17:51:33Z" class="relativetime">jan 19 14</span>
+                        <a href="https://data.stackexchange.com/users/12469">rolfl</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="38,124">38k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="My Comments, ordered by Score 2
+" href="https://data.stackexchange.com/stackoverflow/query/49864/my-comments-ordered-by-score-pundit-badge-progress">My comments, ordered by score (Pundit badge progress)</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2013-07-01 14:19:51Z" class="relativetime">jul 1 13</span>
+                        <a href="https://data.stackexchange.com/users/6479">Tomas</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="30,403">30k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/87307/top-n-users-in-the-country">Top N Users in the Country</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2013-04-14 05:04:19Z" class="relativetime">apr 14 13</span>
+                        <a href="https://data.stackexchange.com/users/7127">John Woo</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="20,406">20k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="https://meta.stackoverflow.com/questions/350902/tags-that-i-am-in-the-top-5-answeres" href="https://data.stackexchange.com/stackoverflow/query/685751/tags-that-i-am-in-the-top-5-answeres">Tags that I am in the Top 5 answeres</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2019-08-10 12:49:06Z" class="relativetime">aug 10 19</span>
+                        <a href="https://data.stackexchange.com/users/11779">rene</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="19,643">20k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Accounting only for votes cast on questions less than 31 days after the question was created." href="https://data.stackexchange.com/stackoverflow/query/219032/number-of-votes-per-month">Number of votes per month</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2014-08-19 18:31:04Z" class="relativetime">aug 19 14</span>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="19,072">19k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="finds questions that have been inactive for at least 6 months" href="https://data.stackexchange.com/stackoverflow/query/77362/find-posts-to-edit-for-excavator-and-archaeologist-badges">find posts to edit for Excavator and Archaeologist badges</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-08-15 15:49:32Z" class="relativetime">aug 15 12</span>
+                        <a href="https://data.stackexchange.com/users/3353">Brad Mace</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="18,911">19k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="All users which have the necessary reputation and badges for the 2011 Stack Overflow Moderator election taking part at the end of the year." href="https://data.stackexchange.com/stackoverflow/query/51439/users-eligible-for-2011-stack-overflow-moderator-elections">Users eligible for 2011 Stack Overflow moderator elections</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-11-07 20:39:31Z" class="relativetime">nov 7 11</span>
+                        <a href="https://data.stackexchange.com/users/5414">random</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="18,158">18k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Based on Q#734, the accepted answer in meta
+" href="https://data.stackexchange.com/stackoverflow/query/5005/journey-to-be-a-generalist">Journey to be a Generalist</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-17 21:13:21Z" class="relativetime">sep 17 11</span>
+                        <a href="https://data.stackexchange.com/users/99">amarghosh</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="17,797">18k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="This query calculates how much reputation has been cut off because
+you reached the limit of 200 reputation per day (through upvotes).
+" href="https://data.stackexchange.com/stackoverflow/query/32693/reputation-cap-cut-off">Reputation cap cut off</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-11-20 22:02:35Z" class="relativetime">nov 20 11</span>
+                        <a href="https://data.stackexchange.com/users/5711">halfdan</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="16,623">17k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Total passive reputation gained from old posts
+Reputation gained in the first 15 days of post is ignored; all reputation after that is considered passive reputation.
+Post must be at least 60 Days old." href="https://data.stackexchange.com/stackoverflow/query/27741/staying-power">Staying Power</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-08-26 21:40:56Z" class="relativetime">aug 26 11</span>
+                        <a href="https://data.stackexchange.com/users/194">mmyers</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="16,446">16k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Sorted by score
+" href="https://data.stackexchange.com/stackoverflow/query/30334/my-comments">My comments</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-12 22:39:37Z" class="relativetime">sep 12 11</span>
+                        <a href="https://data.stackexchange.com/users/194">mmyers</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="15,402">15k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="The Stats of a Tag only gives the Top-20 answerers. This query can list more of them and give other info as well.
+" href="https://data.stackexchange.com/stackoverflow/query/3525/top-answerers-for-a-given-tag">Top Answerers for a Given Tag</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-05 20:58:05Z" class="relativetime">sep 5 11</span>
+                        <a href="https://data.stackexchange.com/users/771">lkessler</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="14,716">15k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Forget Gold / Silver / Bronze — how often are these badges really being handed out? Score is relative to the most common badge. Does not include tag badges.
+" href="https://data.stackexchange.com/stackoverflow/query/34248/badges-to-aspire-to">Badges to Aspire To</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-11-14 04:33:05Z" class="relativetime">nov 14 11</span>
+                        <a href="https://data.stackexchange.com/users/5592">mattdm</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="14,173">14k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="This shows how much of the users reputation came from questions as opposed
+to answers or edits, bounties, etc. Can take 60 seconds to run.
+" href="https://data.stackexchange.com/stackoverflow/query/43503/reputation-breakdown-question-versus-answer-versus-other">Reputation breakdown: Question, versus answer, versus other</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-10-16 01:29:17Z" class="relativetime">oct 16 11</span>
+                        <a href="https://data.stackexchange.com/users/6306">Awesome Poodles</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="12,853">13k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="targeting answers from users with not a lot of rep. I hate the use of `body like`, so please feel free to edit this. It was just quick n dirty! The Marshal badge is:	 &quot;Achieved a flag weight of 749 by reviewing and flagging appropriately :" href="https://data.stackexchange.com/stackoverflow/query/46134/posts-that-could-be-marked-as-not-an-answer-to-help-get-the-marshal-badge">Posts that could be marked as 'not an answer' to help get the Marshal badge</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-27 09:41:37Z" class="relativetime">sep 27 11</span>
+                        <a href="https://data.stackexchange.com/users/2189">p.campbell</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>10</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="12,639">13k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Created by samliew (http://stackoverflow.com/users/584192/samuel-liew)
+" href="https://data.stackexchange.com/stackoverflow/query/194306/top-users-by-country-and-tag">Top Users by Country and tag</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2014-06-22 22:57:12Z" class="relativetime">jun 22 14</span>
+                        <a href="https://data.stackexchange.com/users/14749">Danijel</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>9</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="196,141">196k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="#Temporary views and functions return errors stating they're not allowed.
+Use Text-only results, and include the execution plan to see the index has been used.
+" href="https://data.stackexchange.com/stackoverflow/query/5646/temporary-tables-indexes-and-procedures-work">#Temporary tables, indexes and procedures work!</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2012-01-19 00:01:23Z" class="relativetime">jan 19 12</span>
+                        <a href="https://data.stackexchange.com/users/55">Mark Hurd</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>9</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="192,965">193k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="" href="https://data.stackexchange.com/stackoverflow/query/1075286/duplicate-questions-count-per-month">Duplicate Questions Count per Month</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2020-10-12 22:35:02Z" class="relativetime">oct 12</span>
+                        <a href="https://data.stackexchange.com/users/31038">Moradnejad</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <div class="favorites">
+                        <span title="You can favorite this query if you navigate to it" class="star-off"></span>
+                        <div class="favoritecount"><b>9</b></div>
+                </div>
+                <div class="views">
+                    <span class="totalViews"><span class="pretty-short" title="122,842">123k</span></span>
+                    <span class="viewDesc">views</span>
+                </div>
+                <div class="title">
+                    <h3>
+                        <a title="Looking at the duration from when a user created their account till
+the last post, who gained the most rep per day
+" href="https://data.stackexchange.com/stackoverflow/query/946/rising-stars-top-50-users-ordered-on-rep-per-day">Rising stars, top 50 users ordered on rep per day</a>
+                    </h3>
+                </div>
+                <div class="user">
+                    <span title="2011-09-24 15:38:07Z" class="relativetime">sep 24 11</span>
+                        <a href="https://data.stackexchange.com/users/1">sam.saffron</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+    </ul>
+    <div class="page-sizer fr"><a href="https://data.stackexchange.com/stackoverflow/queries?order_by=favorite&amp;pagesize=30" title="show 30 items per page" class="page-numbers">30</a>
+<a href="https://data.stackexchange.com/stackoverflow/queries?order_by=favorite&amp;pagesize=50" title="show 50 items per page" class="page-numbers">50</a>
+<a href="https://data.stackexchange.com/stackoverflow/queries?order_by=favorite&amp;pagesize=100" title="show 100 items per page" class="current page-numbers">100</a>
+<span class="page-numbers desc">per page</span>
+</div>
+    <div class="pager">
+<span class="page-numbers current">1</span>
+<a href="https://data.stackexchange.com/stackoverflow/queries?order_by=favorite&amp;page=2&amp;pagesize=100" title="go to page 2"><span class="page-numbers">2</span></a>
+<a href="https://data.stackexchange.com/stackoverflow/queries?order_by=favorite&amp;page=3&amp;pagesize=100" title="go to page 3"><span class="page-numbers">3</span></a>
+<a href="https://data.stackexchange.com/stackoverflow/queries?order_by=favorite&amp;page=4&amp;pagesize=100" title="go to page 4"><span class="page-numbers">4</span></a>
+<a href="https://data.stackexchange.com/stackoverflow/queries?order_by=favorite&amp;page=5&amp;pagesize=100" title="go to page 5"><span class="page-numbers">5</span></a>
+<span class="page-numbers dots">…</span>
+<a href="https://data.stackexchange.com/stackoverflow/queries?order_by=favorite&amp;page=74&amp;pagesize=100" title="go to page 74"><span class="page-numbers">74</span></a>
+<a href="https://data.stackexchange.com/stackoverflow/queries?order_by=favorite&amp;page=2&amp;pagesize=100" title="go to page 2" rel="next"><span class="page-numbers next"> next</span></a>
+</div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        var hideSkipped = function () {
+            if (skippedVisible == false) {
+                $('.admin .skipped').each(function () {
+                    $(this).parent().parent().hide();
+                });
+            }
+        };
+
+        var showSkipped = function () {
+            $('.admin .skipped').each(function () {
+                $(this).parent().parent().show();
+            });
+        };
+
+        var skippedVisible = false;
+
+        $(".showSkipped").toggle(function () {
+            $(this).text("hide skipped queries");
+            skippedVisible = true;
+            showSkipped();
+        }, function () {
+            skippedVisible = false;
+            $(this).text("show skipped queries");
+            hideSkipped();
+        });
+
+        $(".showAdmin").toggle(function () {
+            $(this).text("hide admin functions");
+            $('.admin').show();
+            hideSkipped();
+        }, function () {
+            $(this).text("show admin functions");
+            $('.admin').hide();
+            showSkipped();
+        });
+
+        $('.admin .skip').click(function () {
+
+            var href = $(this);
+            var id = $.trim(href.parent().find(".id").text());
+
+            var featured = $(this).hasClass("skipped");
+
+            if (featured) {
+                $.post("/skip_query/" + id, { skip: false }, function () {
+                    href.text("skip");
+                    href.removeClass("skipped");
+                });
+            }
+            else {
+                $.post("/skip_query/" + id, { skip: true }, function () {
+                    href.text("skipped");
+                    href.addClass("skipped");
+                    hideSkipped();
+                });
+            }
+
+            return false;
+
+        });
+
+        $('.admin .feature').click(function () {
+
+            var href = $(this);
+            var id = $.trim(href.parent().find(".id").text());
+
+            var featured = $(this).hasClass("featured");
+
+            if (featured) {
+                $.post("/feature_query/" + id, { feature: false }, function () {
+                    href.text("feature");
+                    href.removeClass("featured");
+                });
+            }
+            else {
+                $.post("/feature_query/" + id, { feature: true }, function () {
+                    href.text("featured");
+                    href.addClass("featured");
+                });
+            }
+
+            return false;
+
+        });
+
+    });
+</script>
+        
+    <div id="sidebar">
+        <div class="module">
+            <div class="summarycount al ">7,368</div>
+            <p>queries</p>
+        </div>
+        
+        <div id="aboutSite" class="module">
+            <a href="https://stackoverflow.com/">
+                <img src="sede_main_page_files/logo.png" alt="Stack Overflow" class="site">
+            </a>
+            <p class="tagline">Q&amp;A for professional and enthusiast programmers</p>
+        </div>
+
+        <div class="module totalQuestions">
+            <span class="pretty-short" title="20,758,397">21m</span>
+            <span class="desc">questions </span>
+        </div>
+        <div class="module totalAnswers">
+            <span class="pretty-short" title="31,001,647">31m</span>
+            <span class="desc">answers </span>
+        </div>
+        <div class="module totalComments">
+            <span class="pretty-short" title="78,762,813">79m</span>
+            <span class="desc">comments </span>
+        </div>
+        <div class="module totalTags">
+            <span class="pretty-short" title="60,437">60k</span>
+            <span class="desc">tags </span>
+        </div>
+        <div class="module latestPost">
+            <span class="title"><span title="2021-01-31 10:17:36Z" class="relativetime">jan 31</span></span>
+            <span class="desc">most recent </span>
+        </div>
+        
+    </div>
+
+    </div>
+    <div id="footer">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <a href="https://data.stackexchange.com/about">help</a>
+                <a href="https://stackexchange.com/sites">sites</a>
+                <a href="https://stackoverflow.blog/">blog</a>
+                <a href="https://chat.stackexchange.com/rooms/13526/sede-stack-exchange-data-explorer">chat</a>
+                <a href="https://data.stackexchange.com/">data</a>
+                <a href="https://stackexchange.com/legal">legal</a>
+                <strong><a href="https://meta.stackexchange.com/contact">contact us</a></strong>
+                <strong><a href="https://meta.stackexchange.com/">feedback</a></strong>
+            </div>
+            <div id="copyright">
+                site design / logo © 2021 Stack Exchange Inc; 
+                user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">cc by-sa</a>; see the <a href="https://stackoverflow.com/help/licensing">licensing help page</a> for more info
+            </div>
+            <div id="revision">rev 2020.12.13.80</div>
+        </div>
+    </div>
+    <noscript>
+        <div id="noscript-warning">
+            Data Explorer works best with JavaScript enabled</div>
+    </noscript>
+    <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50203-8', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body></html>
