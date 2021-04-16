@@ -125,7 +125,7 @@ if __name__ == '__main__':
         plt.savefig('metrics_bydb_byquery_{}.pdf'.format(metric))
         plt.close()
 
-        sns.catplot(
+        cat = sns.catplot(
             data=df,
             x='query',
             y='value',
@@ -135,7 +135,14 @@ if __name__ == '__main__':
             legend=False,
             palette='Set2',
         )
-        plt.legend(loc='upper left')
+        lines = cat.axes.flat[0].lines
+        styles = ['-', '--', '-.', ':']
+
+        for line, style in zip(lines, styles):
+            line.set_linestyle(style)
+
+        labels = [t.get_text() for t in plt.legend().texts] # get labels in correct order
+        plt.legend(handles=lines, labels=labels, loc='upper left', handlelength=4)
         plt.xticks(rotation='vertical')
         plt.savefig('metrics_bydb_{}.pdf'.format(metric))
         plt.close()

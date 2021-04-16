@@ -84,8 +84,8 @@ def main():
     # Reverse cluster indices (sort decreasing).
     # Add 2 so that weights start from 1 and do not repeat.
     df['pdf'] = kde.evaluate(df.logf.to_numpy())
-    df['cluster'] = clust.max() - clust 
-    df['weight'] = fib(df.cluster + 2) 
+    df['cluster'] = clust.max() - clust
+    df['weight'] = fib(df.cluster + 2)
 
     # Write table to file for reproducibility, but also
     # print it in a human-readable format.
@@ -109,15 +109,18 @@ def main():
     ranges = df.groupby('weight').logf.aggregate(['min', 'max'])
     cmap = cm.get_cmap('Pastel1')
     colors = [cmap(i) for i in range(len(ranges))]
+    hatches = ['/', '\\', 'O', 'x', '.', '+', '*', '-', '|']
 
-    for row, color in zip(ranges.itertuples(), colors):
+    for row, color, hatch in zip(ranges.itertuples(), colors, hatches):
         weight = str(row.Index)
         x, y = row.min, 0.0
         width, height = row.max - row.min, ylim
-        
+
         patch = ax.add_patch(Rectangle((x, y), width, height))
         patch.set_label(weight)
-        patch.set_color(color)
+        patch.set_facecolor(color)
+        patch.set_edgecolor('grey')
+        patch.set_hatch(hatch * 2) # increase density
         patch.set_alpha(3/4)
 
     ax.set_xlim(df.logf.min(), df.logf.max())
